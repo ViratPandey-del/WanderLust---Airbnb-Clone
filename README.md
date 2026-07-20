@@ -16,14 +16,22 @@ This repository documents my learning journey by implementing real-world web dev
 - HTML5
 - CSS3
 
-## ✨ Current Features
+## ✨ Features Implemented
 
-- Responsive homepage
-- Display all property listings
-- MongoDB database integration
-- Mongoose data modeling
-- Dynamic rendering using EJS
-- Bootstrap-based responsive UI
+- Complete CRUD Operations (Create, Read, Update, Delete)
+- RESTful Routing
+- MongoDB Database Integration (Mongoose)
+- EJS Templates with EJS-Mate Layouts
+- Bootstrap Responsive UI
+- Server-side Validation using Joi
+- Client-side Form Validation
+- Custom Validation Middleware
+- Custom ExpressError Class
+- Global Error Handling Middleware
+- Async Error Handling using wrapAsync
+- Custom Error Page (error.ejs)
+- Method Override for PUT & DELETE Requests
+- Clean Project Structure
 
 ## 🔨 Upcoming Features
 
