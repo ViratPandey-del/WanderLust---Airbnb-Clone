@@ -33,6 +33,38 @@ This repository documents my learning journey by implementing real-world web dev
 - Method Override for PUT & DELETE Requests
 - Clean Project Structure
 
+### Listings
+- View all listings
+- View listing details
+- Create new listings
+- Edit listings
+- Delete listings
+
+### Reviews
+- Add reviews
+- Delete reviews
+- One-to-many relationship between Listings and Reviews
+
+### Validation
+- Joi validation for listings
+- Joi validation for reviews
+- Bootstrap client-side validation
+- Mongoose schema validation
+
+### Error Handling
+- Custom ExpressError class
+- Async error handling using wrapAsync
+- Centralized error middleware
+
+### Database
+- MongoDB integration
+- Mongoose Models
+- Data seeding
+
+### UI
+- Responsive Bootstrap interface
+- EJS layouts using EJS-Mate
+
 ## 🔨 Upcoming Features
 
 - Create, Edit & Delete Listings (CRUD)
