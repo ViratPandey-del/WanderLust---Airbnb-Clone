@@ -28,14 +28,26 @@ module.exports.isOwner = async(req,res,next) => {
     next();
 };
 
-module.exports.validateListing = (req,res,next) => {
-    let {error} = listingSchema.validate(req.body);
-    if(error) {
-    let errMsg = error.details.map((el) => el.message).join(",");
-    throw new ExpressError(400 , errMsg);
-    } else {
-    next();
+module.exports.validateListing = (req, res, next) => {
+    if (req.method === "POST" && !req.file) {
+        throw new ExpressError(400, "Listing image is required");
     }
+
+    if (req.file) {
+        req.body.listing.image = {
+            url: req.file.path,
+            filename: req.file.filename
+        };
+    }
+
+    let { error } = listingSchema.validate(req.body);
+
+    if (error) {
+        let errMsg = error.details.map((el) => el.message).join(",");
+        throw new ExpressError(400, errMsg);
+    }
+
+    next();
 };
 
 module.exports.validateReview = (req,res,next) => {
